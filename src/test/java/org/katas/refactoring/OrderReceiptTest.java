@@ -1,7 +1,8 @@
 package org.katas.refactoring;
 
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
@@ -9,10 +10,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 
 
-public class OrderReceiptTest {
+class OrderReceiptTest {
 
     @Test
-    public void shouldPrintCustomerInformationOnOrder() {
+    void shouldPrintCustomerInformationOnOrder() {
         Order order = new Order("Mr X", "Chicago, 60601", new ArrayList<LineItem>());
         OrderReceipt receipt = new OrderReceipt(order);
 
