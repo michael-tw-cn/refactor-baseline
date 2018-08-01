@@ -21,7 +21,7 @@ class OrderReceiptTest {
 
 
         assertThat(output, containsString("Mr X"));
-        assertThat(output, containsString("Chicago, 60601"));
+        assertThat(output, containsString("Chicadfdgo, 60601"));
     }
 
     @Test
