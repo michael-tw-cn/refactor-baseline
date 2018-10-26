@@ -1,8 +1,11 @@
-package org.katas.refactoring;
+package org.katas.refactor.order;
 
 
 
 import org.junit.jupiter.api.Test;
+import org.katas.refactor.order.LineItem;
+import org.katas.refactor.order.Order;
+import org.katas.refactor.order.OrderReceipt;
 
 import java.util.ArrayList;
 

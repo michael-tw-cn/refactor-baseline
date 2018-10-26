@@ -1,4 +1,4 @@
-package org.katas.refactoring;
+package org.katas.refactor.order;
 
 public class LineItem {
 	private String desc;
