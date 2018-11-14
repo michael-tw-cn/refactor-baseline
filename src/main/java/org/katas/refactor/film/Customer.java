@@ -1,6 +1,5 @@
 package org.katas.refactor.film;
 
-import java.util.Enumeration;
 import java.util.Vector;
 
 public class Customer {
@@ -21,15 +20,15 @@ public class Customer {
     }
 
     String statement() {
-        double totalAmount = 0;
-        int frequentRenterPoints = 0;
-        Enumeration<Rental> rentals = this.rentals.elements();
-        StringBuilder result = new StringBuilder("Rental Record for " + getName() + "\n");
+        var totalAmount = 0d;
+        var frequentRenterPoints = 0;
+        var rentals = this.rentals.elements();
+        var result = new StringBuilder("Rental Record for " + getName() + "\n");
         while (rentals.hasMoreElements()) {
-            Rental each = rentals.nextElement();
+            var each = rentals.nextElement();
             //show figures for this rental
             //determine amounts for each line
-            double thisAmount = 0;
+            var thisAmount = 0d;
             switch (each.getMovie().getPriceCode()) {
                 case Movie.REGULAR:
                     thisAmount += 2;

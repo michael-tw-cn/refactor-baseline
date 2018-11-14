@@ -1,11 +1,7 @@
 package org.katas.refactor.order;
 
 
-
 import org.junit.jupiter.api.Test;
-import org.katas.refactor.order.LineItem;
-import org.katas.refactor.order.Order;
-import org.katas.refactor.order.OrderReceipt;
 
 import java.util.ArrayList;
 
@@ -17,10 +13,10 @@ class OrderReceiptTest {
 
     @Test
     void shouldPrintCustomerInformationOnOrder() {
-        Order order = new Order("Mr X", "Chicago, 60601", new ArrayList<LineItem>());
-        OrderReceipt receipt = new OrderReceipt(order);
+        var order = new Order("Mr X", "Chicago, 60601", new ArrayList<LineItem>());
+        var receipt = new OrderReceipt(order);
 
-        String output = receipt.printReceipt();
+        var output = receipt.printReceipt();
 
 
         assertThat(output, containsString("Mr X"));
@@ -29,14 +25,14 @@ class OrderReceiptTest {
 
     @Test
     public void shouldPrintLineItemAndSalesTaxInformation() {
-        ArrayList<LineItem> lineItems = new ArrayList<LineItem>() {{
+        var lineItems = new ArrayList<LineItem>() {{
             add(new LineItem("milk", 10.0, 2));
             add(new LineItem("biscuits", 5.0, 5));
             add(new LineItem("chocolate", 20.0, 1));
         }};
-        OrderReceipt receipt = new OrderReceipt(new Order(null, null, lineItems));
+        var receipt = new OrderReceipt(new Order(null, null, lineItems));
 
-        String output = receipt.printReceipt();
+        var output = receipt.printReceipt();
 
         assertThat(output, containsString("milk\t10.0\t2\t20.0\n"));
         assertThat(output, containsString("biscuits\t5.0\t5\t25.0\n"));

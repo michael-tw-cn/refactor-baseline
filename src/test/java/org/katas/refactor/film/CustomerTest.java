@@ -10,7 +10,7 @@ class CustomerTest {
 
     @Test
     void should_return_correct_result_when_call_statement() {
-        Customer customer = new Customer("阳阳");
+        var customer = new Customer("阳阳");
         customer.addRental(new Rental(new Movie("猫和老鼠", Movie.CHILDREN), 4));
         customer.addRental(new Rental(new Movie("拯救大兵日嗯", Movie.NEW_RELEASE), 5));
         customer.addRental(new Rental(new Movie("魔道祖师", Movie.REGULAR), 6));
